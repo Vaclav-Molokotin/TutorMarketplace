@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ActivityLogin"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp">
+    </ImageView>
+
+    <TextView style="@style/baseTextView"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:text="Вход"
+        android:textSize="35sp">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+        <TextView style="@style/baseTextView"
+            android:text="Логин или телефон">
+        </TextView>
+
+        <EditText
+            android:id="@+id/editTextLogin"
+            style="@style/baseEditText"
+            android:background="@drawable/button_template">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+        <TextView style="@style/baseTextView"
+            android:text="Пароль"            >
+        </TextView>
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            style="@style/baseEditText"
+            android:background="@drawable/button_template"
+            android:inputType="textPassword"
+            >
+        </EditText>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <Button style="@style/baseButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/TextRegister"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Войти"
+            android:layout_margin="10dp"
+            android:onClick="btnLogin_click"
+            >
+        </Button>
+        <TextView
+            android:id="@+id/TextRegister"
+            style="@style/baseTextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Зарегистрироваться"
+            android:textColor="@color/baseRed"
+            android:onClick="textRegister_click">
+
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

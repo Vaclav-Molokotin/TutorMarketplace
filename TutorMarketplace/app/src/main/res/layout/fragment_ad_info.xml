@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentAdInfo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Изучение франзуского языка"
+            style="@style/baseLabel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+        </TextView>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Описание: Уроки французского 5 тысяч час"
+            style="@style/baseTextView"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintLeft_toLeftOf="parent">
+        </TextView>
+
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Стоимость: 1000 рублей"
+            style="@style/baseTextView"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_constraintLeft_toLeftOf="parent">
+        </TextView>
+
+        <ImageView
+            android:layout_margin="20dp"
+            android:id="@+id/imgPreview"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/profile"
+            app:layout_constraintRight_toLeftOf="@id/declareApp"
+            app:layout_constraintBottom_toTopOf="@id/declareApp"
+            app:layout_constraintLeft_toLeftOf="parent">
+        </ImageView>
+
+        <TextView
+            style="@style/baseTextView"
+            android:id="@+id/owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Владелец"
+            app:layout_constraintTop_toTopOf="@id/imgPreview"
+            app:layout_constraintLeft_toRightOf="@id/imgPreview">
+        </TextView>
+
+        <TextView
+            style="@style/baseTextView"
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Рейтинг: 3/5"
+            app:layout_constraintTop_toBottomOf="@id/owner"
+            app:layout_constraintLeft_toRightOf="@id/imgPreview">
+        </TextView>
+
+        <Button
+            android:id="@+id/declareApp"
+            style="@style/baseButton"
+            android:layout_width="match_parent"
+            android:text="Подать заявку"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="70dp">
+        </Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

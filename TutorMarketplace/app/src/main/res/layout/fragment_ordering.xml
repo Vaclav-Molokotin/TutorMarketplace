@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentOrdering">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_margin="10dp">
+       
+       <TextView
+           android:id="@+id/labName"
+           style="@style/baseLabel"
+           android:textAlignment="gravity"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintLeft_toLeftOf="parent"
+           android:text="Наименование услуги:">
+       </TextView>
+
+       <TextView
+           android:id="@+id/name"
+           style="@style/baseTextView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/labName"
+           app:layout_constraintLeft_toLeftOf="parent"
+           android:text="Услуга">
+       </TextView>
+
+       <TextView
+           android:id="@+id/cost"
+           android:paddingTop="30dp"
+           android:paddingBottom="30dp"
+           style="@style/baseTextView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/name"
+           app:layout_constraintLeft_toLeftOf="parent"
+           android:text="Стоимость: 1000 рублей в час">
+       </TextView>
+
+       <TextView
+           android:id="@+id/labWriteMessage"
+           style="@style/baseLabel"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textAlignment="gravity"
+           app:layout_constraintTop_toBottomOf="@id/cost"
+           app:layout_constraintLeft_toLeftOf="parent"
+           android:text="Напишите сообщение репетитору:">
+       </TextView>
+
+       <EditText
+           android:id="@+id/message"
+           android:layout_width="match_parent"
+           android:layout_height="300dp"
+           android:background="@drawable/container_template"
+           app:layout_constraintTop_toBottomOf="@id/labWriteMessage"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           android:layout_margin="5dp"
+           android:hint="Введите текст..."
+           android:padding="5dp"
+           android:gravity="top|start">
+       </EditText>
+
+       <Button
+           android:id="@+id/btnOrder"
+           style="@style/baseButton"
+           android:backgroundTint="@color/baseViolet"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Оформить заявку"
+           app:layout_constraintTop_toBottomOf="@id/message"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           android:onClick="onClick">
+       </Button>
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

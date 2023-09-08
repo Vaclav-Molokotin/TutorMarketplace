@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+         <ImageView
+             android:id="@+id/imgPreview"
+             android:layout_width="120dp"
+             android:layout_height="120dp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             android:layout_margin="30dp"
+             android:src="@drawable/profile"
+             android:background="@color/baseGray"
+             android:padding="10dp">
+         </ImageView>
+
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imgPreview"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/baseLabel"
+                android:text="Фамилия Имя Отчество">
+            </TextView>
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/edit">
+            </ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutInfo"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="10dp">
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/baseTextView"
+                android:text="О себе:">
+            </TextView>
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/baseTextView"
+                android:text="Рейтинг:">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/baseTextView"
+                    android:text="Посмотреть отзывы"
+                    android:textColor="@color/baseViolet"
+                    android:textSize="17dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/MyAds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/baseTextView"
+                    android:text="Мои объявления"
+                    android:textColor="@color/baseViolet"
+                    android:textSize="17dp">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnExit"
+            style="@style/baseButton"
+            android:backgroundTint="@color/baseRed"
+            android:text="Выйти"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="70dp">
+        </Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityRegister"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp">
+
+    </ImageView>
+
+    <TextView style="@style/baseTextView"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="2dp"
+        android:text="Регистрация"
+        android:textSize="35sp">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="vertical">
+        <TextView style="@style/baseTextView"
+            android:text="Логин или телефон">
+        </TextView>
+
+        <EditText
+            android:id="@+id/login"
+            style="@style/baseEditText"
+            android:background="@drawable/button_template">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="vertical">
+        <TextView
+            style="@style/baseTextView"
+            android:text="Пароль">
+        </TextView>
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/baseEditText"
+            android:background="@drawable/button_template"
+            android:inputType="textPassword">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="vertical">
+        <TextView style="@style/baseTextView"
+            android:text="Подтвердите пароль">
+        </TextView>
+
+        <EditText
+            android:id="@+id/password2"
+            style="@style/baseEditText"
+            android:inputType="textPassword"
+            android:background="@drawable/button_template">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:orientation="vertical">
+        <TextView style="@style/baseTextView"
+            android:text="Роль">
+        </TextView>
+
+        <RadioGroup
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content">
+            <RadioButton
+                android:id="@+id/rbtnIsStudent"
+                android:text="Я ученик"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:checked="true">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/rbtnIsTutor"
+                android:text="Я репетитор"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+            </RadioButton>
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        style="@style/baseButton"
+        android:text="Зарегистрироваться"
+        android:layout_gravity="center">
+    </Button>
+
+</LinearLayout>
